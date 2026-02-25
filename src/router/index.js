@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { isAuthenticated } from '../auth.js' // Импортируем нашу переменную
 import HomeView from '../views/HomeView.vue'
+import { createWebHistory } from 'vue-router'
+
+createWebHistory(import.meta.env.BASE_URL)
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,3 +43,4 @@ router.beforeEach((to, from, next) => {
 })
 
 export default router
+
